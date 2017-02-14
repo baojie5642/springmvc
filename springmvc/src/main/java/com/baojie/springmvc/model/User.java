@@ -16,16 +16,16 @@ public class User implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "userId")
-    private Long id;
+    private Long userid;
     
     @Column(length = 50)
     private String account;
     public Long getId() {
-        return id;
+        return userid;
     }
 
-    public void setId(Long id) {
-        this.id = id;
+    public void setId(Long userid) {
+        this.userid = userid;
     }
 
     public String getAccount() {
