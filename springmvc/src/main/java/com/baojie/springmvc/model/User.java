@@ -15,17 +15,21 @@ public class User implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "userId")
-    private Long userid;
+    @Column(name = "user_id")
+    private Long user_id;
     
     @Column(length = 50)
     private String account;
     public Long getId() {
-        return userid;
+        return user_id;
     }
 
-    public void setId(Long userid) {
-        this.userid = userid;
+    @Column(name="level")
+    private Integer level;
+    
+    
+    public void setId(Long user_id) {
+        this.user_id = user_id;
     }
 
     public String getAccount() {
@@ -38,4 +42,13 @@ public class User implements Serializable {
     public static long getSerialversionuid() {
         return serialVersionUID;
     }
+
+	public Integer getLevel() {
+		return level;
+	}
+
+	public void setLevel(Integer level) {
+		this.level = level;
+	}
+    
 }
